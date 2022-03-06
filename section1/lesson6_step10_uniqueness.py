@@ -9,29 +9,19 @@ try:
 
     # Ваш код, который заполняет обязательные поля
     input_first_name = browser.find_element_by_css_selector(
-        'input[placeholder="Input your first name"]'
+        '.first_block .first'
     )
     input_first_name.send_keys("Ivan")
 
     input_last_name = browser.find_element_by_css_selector(
-        'input[placeholder="Input your last name"]'
+        '.first_block .second'
     )
     input_last_name.send_keys("Petrov")
 
     input_email = browser.find_element_by_css_selector(
-        'input[placeholder="Input your email"]'
+        '.first_block .third'
     )
     input_email.send_keys("mail@mail.com")
-
-    input_phone = browser.find_element_by_css_selector(
-        'input[placeholder="Input your phone:"]'
-    )
-    input_phone.send_keys("+00000000000")
-
-    input_address = browser.find_element_by_css_selector(
-        'input[placeholder="Input your address:"]'
-    )
-    input_address.send_keys("nowhere")
 
     # Отправляем заполненную форму
     button = browser.find_element_by_css_selector("button.btn")
